@@ -1,0 +1,162 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 0.3fr 0.1fr 1.5fr 0.2fr;
+    min-height: 100vh;
+    margin: 5vh;
+}
+
+img{
+    width: 12rem;
+    height: 12rem;
+    z-index: 3;
+}
+
+.logo{
+    grid-column: 1 / 1;
+    grid-row: 1 / 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header{
+    grid-column: 1 / 4;
+    grid-row: 1 / 2;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    font-size: 0.9rem;
+    background-color: aqua;
+    z-index: 2;
+    color: 	#fff;
+}
+
+nav{
+    grid-column: 1 / 4;
+    grid-row: 2 / 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3em;
+    z-index: 4;
+    
+}
+
+nav ul li{
+    display: inline;
+    list-style: none;
+    margin: 0.3em;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: aqua;
+}
+
+.home,
+.sobre,
+.servicos,
+.depoimentos,
+.contato{
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin: 1.5rem;
+
+}
+
+.home.inativo,
+.sobre.inativo,
+.servicos.inativo,
+.contato.inativo,
+.depoimentos.inativo{
+    display: none;
+}
+
+.home h2{
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+footer{
+    grid-column: 1 / 4;
+    grid-row: 4 / 5;
+    text-align: center;
+    color: #B0B0B0;
+}
+
+@media(max-width: 600px){
+
+    header{
+        grid-column: 2 / 4;
+        font-size: 0.7em;
+    }
+
+    img{
+        width: 6rem;
+        height: 6rem;
+    }
+    
+    nav{
+        font-size: 1em;
+    }
+
+    .home,
+    .sobre,
+    .servicos,
+    .depoimentos,
+    .contato{
+        grid-column: 1 / 4;
+        grid-row: 3 / 4;
+        }
+
+    .home h2{
+       font-size: 1.3em;
+    }
+
+    footer{
+        font-size: 0.8em;
+    }
+
+}
+
+@media(min-width: 601px) and (max-width: 900px){
+
+    img{
+        width: 10rem;
+        height: 10rem;
+        }
+    
+    header{
+        grid-column: 2 / 4;
+        font-size: 1em;
+    }
+
+    nav{
+        font-size: 1em;
+    }
+
+    .home{
+        grid-column: 1 / 4;
+        grid-row: 3 / 4;
+    }
+
+}
+
+@media(min-width: 901px){
+
+}
