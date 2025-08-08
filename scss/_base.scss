@@ -1,0 +1,123 @@
+//estilos base como body, tipografia, reset
+
+@use "variaveis";
+@use "mixins";
+
+/*Limpar Formatos*/
+*{
+    margin: variaveis.$espacamento-zero;
+    padding: variaveis.$espacamento-zero;
+}
+
+/*Cabeçalho*/
+.logo{
+    grid-column: 1 / 1;
+    grid-row: 1 / 2;
+    @include mixins.display-flexcenter;
+    z-index: 999;
+}
+
+.header{
+    grid-column: 1 / 4;
+    grid-row: 1 / 2;
+    @include mixins.display-flexcenter;
+    font-size: variaveis.$size-h1;
+    background-color: variaveis.$cor-destaque;
+    color: variaveis.$cor-base;
+}
+
+/*Menu*/
+.nav{
+    grid-column: 1 / 4;
+    grid-row: 2 / 3;
+    @include mixins.display-flexcenter;
+    font-size: variaveis.$size-list;
+    z-index: 9;
+
+    &__item{
+        display: inline;
+        list-style: none;
+        margin: 0.3em;
+    }
+
+    &__link{
+        text-decoration: none;
+        color: variaveis.$cor-destaque;
+    }
+    
+}
+
+.menu{
+    grid-row: 2 / 3;
+    display: none;
+
+    &__link{
+        text-decoration: none;
+        color: variaveis.$cor-destaque;
+    }
+}
+
+/*Seções*/
+.secao{
+    &__home,
+    &__sobre,
+    &__servicos,
+    &__depoimentos,
+    &__contato{
+        grid-column: 2 / 3;
+        grid-row: 3 / 4;
+        @include mixins.display-flexcenter;
+        flex-direction: column;
+        gap: variaveis.$margim-padrao;
+        margin: variaveis.$margim-padrao;
+    }
+
+    &__home--inativo,
+    &__sobre--inativo,
+    &__servicos--inativo,
+    &__contato--inativo,
+    &__depoimentos--inativo{
+        display: none;
+    }
+}
+
+
+
+.home{
+    &__titulo{
+        font-size: variaveis.$size-h2;
+        text-align: center;
+    }
+}
+
+/*Formulário*/
+.form{
+    display: flex;
+    flex-direction: column;
+
+    &__label{
+        font-weight: bold;
+        padding: 0.3em;
+        margin: 0.3em;
+    }
+
+    &__input{
+        width: 20em;
+        height: 1.5em;
+        padding: 0.15em 0.8em;
+    }
+
+    &__textarea{
+        width: 20em;
+        height: 5em;
+        padding: 0.8em;
+    }
+}
+
+/*Rodapé*/
+.footer{
+    grid-column: 1 / 4;
+    grid-row: 4 / 5;
+    text-align: center;
+    color: variaveis.$cor-base;
+}

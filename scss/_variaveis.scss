@@ -1,0 +1,21 @@
+//cores, espaçamentos, fontes
+
+@use "sass:math";
+
+//espaçamentos:
+$espacamento-zero: 0px;
+$margim-padrao: 1.5rem;
+$margim-mobal: 0.5rem;
+
+//cores:
+$cor-base:  #fff;
+$cor-destaque: aqua;
+
+//fontes:
+$font-padrao: Arial, Helvetica, sans-serif;
+$size-h1: 1.4rem;
+$mobal-h1: calc($size-h1 / 2);
+$size-h2: 1.5rem;
+$size-list: 1.3rem;
+$mobal-list: 1rem;
+$size-p: 1.2rem;

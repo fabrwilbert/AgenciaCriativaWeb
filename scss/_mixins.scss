@@ -1,0 +1,13 @@
+//estilos reutilizáveis
+@use "variaveis";
+
+@mixin borda-arredondada{
+    border: 1px variaveis.$cor-destaque solid;
+    border-radius: 5px;
+}
+
+@mixin display-flexcenter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
